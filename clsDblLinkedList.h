@@ -69,9 +69,6 @@ public:
 
     void InsertAfter(Node* current, T value) {
 
-
-
-
         Node* newNode = new Node();
         newNode->value = value;
         newNode->next = current->next;
@@ -83,8 +80,6 @@ public:
         current->next = newNode;
 
         _Size++;
-
-
     }
 
     void InsertAtEnd(T value) {
@@ -186,7 +181,15 @@ public:
         return (_Size == 0 ? true : false);
     }
 
+    void Clear() {
+     
+        while (_Size > 0) {
+        DeleteFirstNode();
+        }
+        
+    }
 
 
 };
 
+ 
