@@ -20,6 +20,8 @@ int main() {
 
 	MydblLinkedList.PrintList();
 
+	cout << "\nNumber of items in the linked list = " << MydblLinkedList.Size();
+
 
 	clsDblLinkedList<int>::Node* N1 = MydblLinkedList.Find(2);
 
