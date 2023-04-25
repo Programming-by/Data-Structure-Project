@@ -175,18 +175,40 @@ public:
     int Size() {
         return _Size;
     }
-
-    bool IsEmpty() {
+    
+   bool IsEmpty() {
 
         return (_Size == 0 ? true : false);
     }
 
     void Clear() {
-     
+
         while (_Size > 0) {
-        DeleteFirstNode();
+            DeleteFirstNode();
         }
-        
+
+    }
+
+
+
+    void Reverse() {
+
+        Node* Current = head;
+        Node* temp = nullptr;
+
+        while (Current != nullptr) {
+
+            temp = Current->prev;
+            Current->prev = Current->next;
+            Current->next = temp;
+            Current = Current->prev;
+        }
+
+        if (temp != nullptr) {
+            head = temp->prev;
+        }
+
+
     }
 
 
