@@ -21,9 +21,9 @@ int main() {
 	MydblLinkedList.PrintList();
 
 
-	MydblLinkedList.UpdateItem(2, 500);
+	MydblLinkedList.InsertAfter(2, 500);
 
-	cout << "\nAfter Updateing Item(2):\n";
+	cout << "\nAfter Insert Item:\n";
 
 	MydblLinkedList.PrintList();
 
