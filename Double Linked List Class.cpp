@@ -21,7 +21,12 @@ int main() {
 	MydblLinkedList.PrintList();
 
 
-	cout << "\nItem Value is: " << MydblLinkedList.GetItem(2);
+	MydblLinkedList.UpdateItem(2, 500);
+
+	cout << "\nAfter Updateing Item(2):\n";
+
+	MydblLinkedList.PrintList();
+
 
 
 	return 0;
