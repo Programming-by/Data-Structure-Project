@@ -19,7 +19,6 @@ public:
 	void push(T Item) {
 
 		_MyList.InsertAtEnd(Item);
-
 	}
 
 	void pop() {
