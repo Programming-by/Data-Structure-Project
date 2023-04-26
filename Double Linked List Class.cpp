@@ -1,5 +1,5 @@
 #include <iostream>
-#include "clsDblLinkedList.h"
+#include "clsMyQueue.h"
 
 using namespace std;
 
@@ -7,27 +7,32 @@ using namespace std;
 
 int main() {
 
-	clsDblLinkedList <int> MydblLinkedList;
+    clsMyQueue <int> MyQueue;
+
+    MyQueue.push(10);
+    MyQueue.push(20);
+    MyQueue.push(30);
+    MyQueue.push(40);
+    MyQueue.push(50);
 
 
-	MydblLinkedList.InsertAtBeginning(5);
-	MydblLinkedList.InsertAtBeginning(4);
-	MydblLinkedList.InsertAtBeginning(3);
-	MydblLinkedList.InsertAtBeginning(2);
-	MydblLinkedList.InsertAtBeginning(1);
+    cout << "\nQueue: \n";
+    MyQueue.Print();
 
-	cout << "\nLinked List Contenet:\n";
+    cout << "\nQueue Size: " << MyQueue.Size();
+    cout << "\nQueue Front: " << MyQueue.front();
+    cout << "\nQueue Back: " << MyQueue.back();
 
-	MydblLinkedList.PrintList();
+    MyQueue.pop();
 
-
-	MydblLinkedList.InsertAfter(2, 500);
-
-	cout << "\nAfter Insert Item:\n";
-
-	MydblLinkedList.PrintList();
+    cout << "\n\nQueue after pop() : \n";
+    MyQueue.Print();
 
 
+
+
+
+    system("pause>0");
 
 	return 0;
 }
