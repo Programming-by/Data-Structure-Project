@@ -117,8 +117,6 @@ public:
 		OriginalArray = _TempArray;
 	}
 
-
-
 	bool DeleteItemAt(int index) {
 
 		if (index >= _Size || _Size < 0) {
@@ -147,6 +145,16 @@ public:
 		OriginalArray = _TempArray;
 
 	}
+
+	void DeleteFirstItem() {
+		DeleteItemAt(0);
+	}
+
+	 void DeleteLastItem() {
+		DeleteItemAt(_Size - 1);
+
+	}
+
 
 };
 
