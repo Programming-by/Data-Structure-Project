@@ -1,11 +1,11 @@
+
 #include <iostream>
 #include "clsDynamicArray.h"
 
 using namespace std;
 
-
-
-int main() {
+int main()
+{
 
     clsDynamicArray <int> MyDynamicArray(5);
 
@@ -14,31 +14,19 @@ int main() {
     MyDynamicArray.SetItem(2, 30);
     MyDynamicArray.SetItem(3, 40);
     MyDynamicArray.SetItem(4, 50);
-    
 
     cout << "\nIs Empty?  " << MyDynamicArray.IsEmpty();
-    cout << "\nIs Array Size:  " << MyDynamicArray.Size();
-    cout << "\nArray Items:\n";
+    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    cout << "\nArray Items: \n";
 
     MyDynamicArray.PrintList();
 
-   int Index =  MyDynamicArray.Find(30);
-
-   if (Index == -1) {
-
-       cout << "\nItem was not found :-(\n";
-   }
-   else {
-       cout << "\n30 was found at Index : " << Index;
-   }
-
-   MyDynamicArray.DeleteItem(30);
-   cout << "\nIs Array Size:  " << MyDynamicArray.Size();
-   MyDynamicArray.PrintList();
-
+    MyDynamicArray.InsertAt(2, 500);
+    cout << "\n\nArray after insert 500 at index 2:";
+    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    MyDynamicArray.PrintList();
 
 
     system("pause>0");
 
-	return 0;
 }
