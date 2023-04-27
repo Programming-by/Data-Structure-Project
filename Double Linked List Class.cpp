@@ -1,5 +1,5 @@
 #include <iostream>
-#include "clsMyStack.h"
+#include "clsDynamicArray.h"
 
 using namespace std;
 
@@ -7,16 +7,23 @@ using namespace std;
 
 int main() {
 
-    clsMyStack <int> MyStack;
+    clsDynamicArray <int> MyDynamicArray(5);
 
-    MyStack.push(10);
-    MyStack.push(20);
-    MyStack.push(30);
-    MyStack.push(40);
-    MyStack.push(50);
+    MyDynamicArray.SetItem(0, 10);
+    MyDynamicArray.SetItem(1, 20);
+    MyDynamicArray.SetItem(2, 30);
+    MyDynamicArray.SetItem(3, 40);
+    MyDynamicArray.SetItem(4, 50);
+    
+
+    cout << "\nIs Empty?  " << MyDynamicArray.IsEmpty();
+    cout << "\nIs Array Size:  " << MyDynamicArray.Size();
+    cout << "\nArray Items:\n";
 
 
-    cout << "\nStack: \n";
+    MyDynamicArray.PrintList();
+
+   /* cout << "\nStack: \n";
     MyStack.Print();
 
     cout << "\nStack Size: " << MyStack.Size();
@@ -56,7 +63,7 @@ int main() {
 
     MyStack.Clear();
     cout << "\n\nStack after Clear() : \n";
-    MyStack.Print();
+    MyStack.Print();*/
 
     system("pause>0");
 
