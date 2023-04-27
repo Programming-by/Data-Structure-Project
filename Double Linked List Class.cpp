@@ -22,20 +22,11 @@ int main() {
 
     MyDynamicArray.PrintList();
 
+    MyDynamicArray.DeleteItemAt(2);
+    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    MyDynamicArray.PrintList();
 
-    cout << "\nItem (2): " << MyDynamicArray.GetItem(2) << "\n";
-
-     MyDynamicArray.Reverse();
-
-
-     cout << "\nArray Items after reverse: \n";
-     MyDynamicArray.PrintList();
-
-
-     MyDynamicArray.Clear();
-     cout << "\nArray Items after clear: \n";
-     MyDynamicArray.PrintList();
-
+     
 
     system("pause>0");
 

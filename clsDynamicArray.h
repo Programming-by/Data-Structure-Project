@@ -118,5 +118,35 @@ public:
 	}
 
 
+
+	bool DeleteItemAt(int index) {
+
+		if (index >= _Size || _Size < 0) {
+			return false;
+		}
+
+		_Size--;
+
+		_TempArray = new T[_Size];
+		int counter = 0;
+		for (int i = 0; i < index; i++)
+		{
+
+			_TempArray[i] = OriginalArray[i];
+		}
+
+
+		for (int i = index + 1; i < _Size + 1; i++)
+		{
+
+			_TempArray[i - 1] = OriginalArray[i];
+		}
+
+		delete[] OriginalArray;
+
+		OriginalArray = _TempArray;
+
+	}
+
 };
 
