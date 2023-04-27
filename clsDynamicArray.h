@@ -155,6 +155,35 @@ public:
 
 	}
 
+	 int Find(T value) {
+		 
+		 for (int i = 0; i < _Size; i++)
+		 {
+			 if (OriginalArray[i] == value) {
+
+				 return i;
+			 }
+				 
+		 }
+
+		 return -1;
+	 }
+
+
+	 bool DeleteItem(T value) {
+
+		 int index = Find(value);
+
+		 if (index == 0) {
+			 return false;
+		 }
+
+		 DeleteItemAt(index);
+		 return true;
+
+	 }
+
+
 
 };
 

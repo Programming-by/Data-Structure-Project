@@ -22,13 +22,20 @@ int main() {
 
     MyDynamicArray.PrintList();
 
-    MyDynamicArray.DeleteFirstItem();
-    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
-    MyDynamicArray.PrintList();
+   int Index =  MyDynamicArray.Find(30);
 
-    MyDynamicArray.DeleteLastItem();
-    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
-    MyDynamicArray.PrintList();
+   if (Index == -1) {
+
+       cout << "\nItem was not found :-(\n";
+   }
+   else {
+       cout << "\n30 was found at Index : " << Index;
+   }
+
+   MyDynamicArray.DeleteItem(30);
+   cout << "\nIs Array Size:  " << MyDynamicArray.Size();
+   MyDynamicArray.PrintList();
+
 
 
     system("pause>0");
