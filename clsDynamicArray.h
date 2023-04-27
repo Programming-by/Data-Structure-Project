@@ -210,5 +210,36 @@ public:
 		 return true;
 	 }
 
+
+	 void InsertAtBeginning(T value) {
+
+	  InsertAt(0, value);
+
+	 }
+
+
+	 void InsertBefore(int index, T value) {
+		 
+		 if (index < 1)
+	     InsertAt(0, value);
+		 else
+		  InsertAt(index - 1, value);
+
+	 }
+
+	 void InsertAfter(int index, T value) {
+		 if (index >= _Size)
+		  InsertAfter(index - 1, value);
+		 else
+		  InsertAt(index + 1, value);
+
+	 }
+
+	 bool InsertAtEnd(T value) {
+
+		  return InsertAt(_Size , value);
+
+	 }
+
 };
 

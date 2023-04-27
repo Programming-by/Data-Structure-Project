@@ -21,11 +21,26 @@ int main()
 
     MyDynamicArray.PrintList();
 
-    MyDynamicArray.InsertAt(2, 500);
-    cout << "\n\nArray after insert 500 at index 2:";
+    
+    MyDynamicArray.InsertAtBeginning(400);
+    cout << "\n\nArray after insert 400 at Beginning:";
     cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
     MyDynamicArray.PrintList();
 
+    MyDynamicArray.InsertBefore(2,500);
+    cout << "\n\nArray after insert 500 before index 2:";
+    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    MyDynamicArray.PrintList();
+
+    MyDynamicArray.InsertAfter(2, 600);
+    cout << "\n\nArray after insert 600 after index 2:";
+    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    MyDynamicArray.PrintList();
+
+    MyDynamicArray.InsertAtEnd(800);
+    cout << "\n\nArray after insert 800 after index 2:";
+    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    MyDynamicArray.PrintList();
 
     system("pause>0");
 
