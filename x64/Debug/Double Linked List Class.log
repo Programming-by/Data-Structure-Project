@@ -1,3 +1,0 @@
-﻿  Double Linked List Class.cpp
-C:\Users\User\Downloads\Repos\Double Linked List Class\Double Linked List Class\clsDynamicArray.h(147): warning C4715: 'clsDynamicArray<int>::DeleteItemAt': not all control paths return a value
-  Double Linked List Class.vcxproj -> C:\Users\User\Downloads\Repos\Double Linked List Class\x64\Debug\Double Linked List Class.exe
