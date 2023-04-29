@@ -11,6 +11,7 @@ int main()
     
     clsMyString S1;
 
+
     cout << "\nS1 Value: " << S1.Value << "\n";
 
 

@@ -1,23 +1,26 @@
 #pragma once
 #include <iostream>
-#include "clsMyStackArr.h"
+#include <stack>
 
 using namespace std;
 
-class clsMyString : public clsMyStackArr <string> 
+class clsMyString 
 {
 
 private:
+	stack <string> _Undo;
+	stack <string> _Redo;
 	string _Value = "";
 
 public:
 
-	void SetValue(string Value) {
-		_Value = Value;
-
-		clsMyStackArr::push(Value);
+	void SetValue(string value) {
+		_Undo.push(_Value);
+		_Value = value;
 
 	}
+
+
 
 	string GetValue() {
 		return _Value;
@@ -27,13 +30,28 @@ public:
 
 
 	void Undo() {
-		 clsMyStackArr::pop();
-	}
+ 
+		if (!_Undo.empty()) {
 
+			_Redo.push(_Value);
+			_Value = _Undo.top();
+			_Undo.pop();
+		}
+
+	}
+	
 	void Redo() {
-		
+
+	
+		if (!_Redo.empty()) {
+
+			_Undo.push(_Value);
+			_Value = _Redo.top();
+			_Redo.pop();
+		}
 	}
 
 
 };
 
+  
