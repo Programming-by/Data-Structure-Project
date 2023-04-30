@@ -1,63 +1,54 @@
 
 #include <iostream>
-#include "clsMyString.h"
+#include "clsQueueLine.h"
 
 using namespace std;
 
 int main()
 {
+    clsQueueLine PayBillsQueue("A0", 10);
+    clsQueueLine SubscriptionQueue("B0",5);
 
-    cout << "\n\n\t\t\t\t\t\t Undo/Redo Project\n\n";
+    PayBillsQueue.IssueTicket();
+    PayBillsQueue.IssueTicket();
+    PayBillsQueue.IssueTicket();
+    PayBillsQueue.IssueTicket();
+    PayBillsQueue.IssueTicket();
+
+    cout << "\nPay Bills Queue Info:\n";
+    PayBillsQueue.PrintInfo();
+
+    PayBillsQueue.PrintTicketsLineRTL();
+    PayBillsQueue.PrintTicketsLineLTR();
+
+    PayBillsQueue.PrintAllTickets();
     
-    clsMyString S1;
+
+    PayBillsQueue.ServeNextClient();
+
+    cout << "\nPay Bills Queue After Serving on One client\n";
+    PayBillsQueue.PrintInfo();
+
+    cout << "\nPay Bills Queue Info:\n";
+
+    SubscriptionQueue.IssueTicket();
+    SubscriptionQueue.IssueTicket();
+    SubscriptionQueue.IssueTicket();
 
 
-    cout << "\nS1 Value: " << S1.Value << "\n";
+    SubscriptionQueue.PrintInfo();
 
+    SubscriptionQueue.PrintTicketsLineRTL();
+    SubscriptionQueue.PrintTicketsLineLTR();
 
-    S1.Value = "Mohammed";
+    SubscriptionQueue.PrintAllTickets();
 
-    cout << "\nS1 Value: " << S1.Value << "\n";
-
-    S1.Value = "Mohammed2";
-
-    cout << "\nS1 Value: " << S1.Value << "\n";
-
-
-    S1.Value = "Mohammed3";
-
-    cout << "\nS1 Value: " << S1.Value << "\n";
-
-    cout << "\n\nUndo: ";
-    cout << "\n----------\n";
-
-    S1.Undo();
-
-    cout << "S1  after undo = " << S1.Value << "\n";
-
-    S1.Undo();
-
-    cout << "S1  after undo = " << S1.Value << "\n";
-
-
-    S1.Undo();
-
-    cout << "S1  after undo = " << S1.Value << "\n";
-
-    cout << "\n\nRedo: ";
-    cout << "\n----------\n";
+    SubscriptionQueue.ServeNextClient();
+    cout << "\nSubscriptions Queue After Serving One client\n";
+    SubscriptionQueue.PrintInfo();
     
-    S1.Redo();
+    
 
-    cout << "S1  after redo = " << S1.Value << "\n";
-
-    S1.Redo();
-
-    cout << "S1  after redo = " << S1.Value << "\n";
-
-    S1.Redo();
-
-    cout << "S1  after redo = " << S1.Value << "\n";
 
     system("pause>0");
 }
